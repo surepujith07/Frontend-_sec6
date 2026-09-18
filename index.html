@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FEEDTHENEED - Food Sharing Platform</title>
+
+    <!-- Connects the CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER / NAVIGATION
+     ===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+        🍃FEEDT<span>HENEED</span>
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#donor">Donate</a>
+
+        <a href="#find">Find Food</a>
+
+        <a href="#request">Request</a>
+
+        <a href="#tracking">Tracking</a>
+
+        <a href="#dashboard">Dashboard</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <div class="header-buttons">
+
+        <button class="outline-btn"
+                onclick="showMessage('Login is a frontend demo')">
+            Login
+        </button>
+
+        <button class="dark-btn"
+                onclick="showMessage('Signup is a frontend demo')">
+            Sign Up
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main>
+
+
+
+<!-- =====================================================
+     MODULE 01 - HOME PAGE
+     ===================================================== -->
+
+<section id="home" class="hero">
+
+
+    <div class="hero-content">
+
+        <p class="label">
+            COMMUNITY FOOD PLATFORM
+        </p>
+
+
+        <h1>
+
+            Share food.<br>
+
+            <span>Spread care.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            MealBridge connects surplus food from homes,
+            restaurants and events with people and
+            organizations who need it.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#donate"
+               class="primary-btn">
+                Donate Food
+            </a>
+
+
+            <a href="#find"
+               class="secondary-btn">
+                Find Food
+            </a>
+
+        </div>
+
+
+        <div class="hero-statistics">
+
+            <div>
+                <strong>1,200+</strong>
+                <small>Meals Shared</small>
+            </div>
+
+
+            <div>
+                <strong>350+</strong>
+                <small>Donors</small>
+            </div>
+
+
+            <div>
+                <strong>40+</strong>
+                <small>Community Groups</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-visual">
+
+
+        <!-- =================================================
+             HERO IMAGE
+
+             Download a picture showing people sharing food,
+             donating food, or a community food program.
+
+             Rename the downloaded image to:
+             hero-food.jpg
+
+             Put it inside:
+             MealBridge/images/
+
+             Example:
+             images/hero-food.jpg
+             ================================================= -->
+
+        <img src="images/1st.jpg"
+             alt="People sharing food with the community"
+             class="hero-image">
+
+
+        <div class="floating-card card-one">
+
+            🍚
+
+            <div>
+                <strong>30 Meals</strong>
+                <small>Ready to share</small>
+            </div>
+
+        </div>
+
+
+        <div class="floating-card card-two">
+
+            🥕
+
+            <div>
+                <strong>Fresh Food</strong>
+                <small>Available nearby</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS SECTION
+     ===================================================== -->
+
+<section class="process">
+
+
+    <div>
+
+        <b>01</b>
+
+        <div>
+            <strong>Share Surplus</strong>
+            <small>Donate extra food</small>
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <b>02</b>
+
+        <div>
+            <strong>Find Food</strong>
+            <small>Search nearby meals</small>
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <b>03</b>
+
+        <div>
+            <strong>Request Food</strong>
+            <small>Submit your requirement</small>
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <b>04</b>
+
+        <div>
+            <strong>Track</strong>
+            <small>Follow food distribution</small>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 02 - DONOR REGISTRATION
+     ===================================================== -->
+
+<section id="donor"
+         class="section two-column">
+
+
+    <div class="intro">
+
+
+        <!-- =================================================
+             DONOR IMAGE
+
+             Download an image of a person, restaurant,
+             volunteer or organization preparing food
+             for donation.
+
+             Rename it:
+             donor.jpg
+
+             Put it inside:
+             images/donor.jpg
+             ================================================= -->
+
+        <img src="images/2nd.jpg"
+             alt="Food donor preparing food"
+             class="module-image">
+
+
+        <p class="label">
+            MODULE 02
+        </p>
+
+
+        <h2>
+            Donor Registration
+        </h2>
+
+
+        <p>
+
+            Register yourself as a household,
+            restaurant, event organizer or
+            community organization.
+
+        </p>
+
+
+        <div class="note">
+
+            ✓ Safe food information helps
+            coordinate suitable donations.
+
+        </div>
+
+    </div>
+
+
+
+    <form class="form-box"
+          onsubmit="demoSubmit(event,'Donor registration submitted!')">
+
+
+        <h3>
+            Register as a Donor
+        </h3>
+
+
+        <div class="grid">
+
+
+            <label>
+
+                Full Name
+
+                <input type="text"
+                       required
+                       placeholder="Enter your name">
+
+            </label>
+
+
+            <label>
+
+                Donor Type
+
+                <select>
+
+                    <option>Household</option>
+
+                    <option>Restaurant</option>
+
+                    <option>Event / Catering</option>
+
+                    <option>Organization</option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+
+                Phone Number
+
+                <input type="tel"
+                       required
+                       placeholder="+91 98765 43210">
+
+            </label>
+
+
+            <label>
+
+                Email
+
+                <input type="email"
+                       placeholder="you@example.com">
+
+            </label>
+
+
+            <label>
+
+                Location
+
+                <input type="text"
+                       required
+                       placeholder="City / Area">
+
+            </label>
+
+
+            <label>
+
+                Address
+
+                <textarea rows="2"
+                          placeholder="Pickup address"></textarea>
+
+            </label>
+
+
+        </div>
+
+
+        <label class="check">
+
+            <input type="checkbox"
+                   required>
+
+            I agree to provide accurate information.
+
+        </label>
+
+
+        <button class="green-btn full">
+            Register
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 03 - DONATE FOOD
+     ===================================================== -->
+
+<section id="donate"
+         class="section">
+
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="label">
+                MODULE 03
+            </p>
+
+            <h2>
+                Donate Surplus Food
+            </h2>
+
+        </div>
+
+        <span>
+            03
+        </span>
+
+    </div>
+
+
+
+    <form class="donation-box"
+          onsubmit="demoSubmit(event,'Food donation submitted!')">
+
+
+        <div class="form-box">
+
+
+            <!-- =================================================
+                 DONATION IMAGE
+
+                 Download a picture of prepared meals,
+                 packed food or food being donated.
+
+                 Rename:
+                 donation.jpg
+
+                 Put inside:
+                 images/donation.jpg
+                 ================================================= -->
+
+            <img src="images/3rd.jpg"
+                 alt="Prepared food ready for donation"
+                 class="donation-image">
+
+
+            <label>
+
+                Food Name
+
+                <input type="text"
+                       required
+                       placeholder="Example: Vegetable Rice">
+
+            </label>
+
+
+            <div class="grid">
+
+
+                <label>
+
+                    Food Category
+
+                    <select>
+
+                        <option>Vegetarian</option>
+
+                        <option>Non-vegetarian</option>
+
+                        <option>Bakery</option>
+
+                        <option>Fruits & Vegetables</option>
+
+                        <option>Packaged Food</option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Quantity
+
+                    <input type="number"
+                           min="1"
+                           required
+                           placeholder="Number of meals">
+
+                </label>
+
+
+                <label>
+
+                    Prepared Date & Time
+
+                    <input type="datetime-local">
+
+                </label>
+
+
+                <label>
+
+                    Consume Before
+
+                    <input type="datetime-local">
+
+                </label>
+
+
+                <label>
+
+                    Pickup Location
+
+                    <input type="text"
+                           required
+                           placeholder="Area / Landmark">
+
+                </label>
+
+
+                <label>
+
+                    Contact Number
+
+                    <input type="tel"
+                           placeholder="Phone number">
+
+                </label>
+
+
+            </div>
+
+
+            <label>
+
+                Additional Information
+
+                <textarea rows="3"
+                          placeholder="Packing details, allergens, pickup instructions..."></textarea>
+
+            </label>
+
+
+            <button class="dark-btn full">
+
+                Donate Food
+
+            </button>
+
+
+        </div>
+
+
+
+        <aside class="side-message">
+
+
+            <div class="side-icon">
+                🍛
+            </div>
+
+
+            <h3>
+                Your surplus can become someone's meal.
+            </h3>
+
+
+            <p>
+
+                Add details about your food so
+                people nearby can understand
+                what is available.
+
+            </p>
+
+
+        </aside>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 04 - FIND FOOD
+     ===================================================== -->
+
+<section id="find"
+         class="section find-section">
+
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="label">
+                MODULE 04
+            </p>
+
+            <h2>
+                Find Available Food
+            </h2>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SEARCH AND FILTERS -->
+
+    <div class="filters">
+
+
+        <input id="search"
+               type="text"
+               oninput="filterFood()"
+               placeholder="Search food...">
+
+
+        <select id="category"
+                onchange="filterFood()">
+
+            <option value="">
+                All Categories
+            </option>
+
+            <option value="Vegetarian">
+                Vegetarian
+            </option>
+
+            <option value="Bakery">
+                Bakery
+            </option>
+
+            <option value="Fruits">
+                Fruits
+            </option>
+
+        </select>
+
+
+        <select id="location"
+                onchange="filterFood()">
+
+            <option value="">
+                All Locations
+            </option>
+
+            <option value="Vijayawada">
+                Vijayawada
+            </option>
+
+            <option value="Guntur">
+                Guntur
+            </option>
+
+            <option value="Tenali">
+                Tenali
+            </option>
+
+            <option value="Mangalagiri">
+                Mangalagiri
+            </option>
+
+        </select>
+
+
+    </div>
+
+
+
+    <div id="foodList"
+         class="food-list">
+
+
+
+        <!-- ================= FOOD 1 ================= -->
+
+        <article class="food-card"
+                 data-food="vegetable rice"
+                 data-category="Vegetarian"
+                 data-location="Vijayawada">
+
+
+            <!-- =================================================
+                 VEGETABLE RICE IMAGE
+
+                 Download a picture of vegetable rice.
+
+                 Rename:
+                 rice.jpg
+
+                 Put inside:
+                 images/rice.jpg
+                 ================================================= -->
+
+            <img src="images/4th.jpg"
+                 alt="Vegetable rice"
+                 class="food-card-image">
+
+
+            <div>
+
+                <span class="tag">
+                    AVAILABLE
+                </span>
+
+                <h3>
+                    Vegetable Rice
+                </h3>
+
+                <p>
+                    30 meals · Vegetarian
+                </p>
+
+                <small>
+                    📍 Benz Circle, Vijayawada
+                </small>
+
+            </div>
+
+
+            <button class="green-btn"
+                    onclick="requestFood('Vegetable Rice')">
+
+                Request
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- ================= FOOD 2 ================= -->
+
+        <article class="food-card"
+                 data-food="idly sambar"
+                 data-category="Vegetarian"
+                 data-location="Guntur">
+
+
+            <!-- =================================================
+                 IDLY IMAGE
+
+                 Download a picture of idly and sambar.
+
+                 Rename:
+                 idly.jpg
+
+                 Put inside:
+                 images/idly.jpg
+                 ================================================= -->
+
+            <img src="images/5th.jpg"
+                 alt="Idly and sambar"
+                 class="food-card-image">
+
+
+            <div>
+
+                <span class="tag">
+                    AVAILABLE
+                </span>
+
+                <h3>
+                    Idly & Sambar
+                </h3>
+
+                <p>
+                    20 meals · Vegetarian
+                </p>
+
+                <small>
+                    📍 Guntur
+                </small>
+
+            </div>
+
+
+            <button class="green-btn"
+                    onclick="requestFood('Idly & Sambar')">
+
+                Request
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- ================= FOOD 3 ================= -->
+
+        <article class="food-card"
+                 data-food="chapati curry"
+                 data-category="Vegetarian"
+                 data-location="Mangalagiri">
+
+
+            <!-- =================================================
+                 CHAPATI IMAGE
+
+                 Download a picture of chapati and curry.
+
+                 Rename:
+                 chapati.jpg
+
+                 Put inside:
+                 images/chapati.jpg
+                 ================================================= -->
+
+            <img src="images/6th.jpg"
+                 alt="Chapati and curry"
+                 class="food-card-image">
+
+
+            <div>
+
+                <span class="tag">
+                    REQUESTED
+                </span>
+
+                <h3>
+                    Chapati & Curry
+                </h3>
+
+                <p>
+                    25 meals · Vegetarian
+                </p>
+
+                <small>
+                    📍 Mangalagiri
+                </small>
+
+            </div>
+
+
+            <button class="outline-btn"
+                    onclick="showMessage('This food is already requested')">
+
+                View
+
+            </button>
+
+
+        </article>
+
+
+
+        <!-- ================= FOOD 4 ================= -->
+
+        <article class="food-card"
+                 data-food="bread fruits"
+                 data-category="Bakery"
+                 data-location="Vijayawada">
+
+
+            <!-- =================================================
+                 BREAD AND FRUITS IMAGE
+
+                 Download a picture of bread and fresh fruits.
+
+                 Rename:
+                 fruits.jpg
+
+                 Put inside:
+                 images/fruits.jpg
+                 ================================================= -->
+
+            <img src="images/7th.jpg"
+                 alt="Bread and fresh fruits"
+                 class="food-card-image">
+
+
+            <div>
+
+                <span class="tag">
+                    AVAILABLE
+                </span>
+
+                <h3>
+                    Bread & Fruits
+                </h3>
+
+                <p>
+                    15 packs · Bakery
+                </p>
+
+                <small>
+                    📍 Vijayawada
+                </small>
+
+            </div>
+
+
+            <button class="green-btn"
+                    onclick="requestFood('Bread & Fruits')">
+
+                Request
+
+            </button>
+
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 05 - REQUEST FOOD
+     ===================================================== -->
+
+<section id="request"
+         class="section request-section two-column">
+
+
+    <div class="request-art">
+
+
+        <!-- =================================================
+             COMMUNITY FOOD IMAGE
+
+             Download a picture showing food distribution
+             to people or a community.
+
+             Rename:
+             community.jpg
+
+             Put inside:
+             images/community.jpg
+             ================================================= -->
+
+        <img src="images/8th.jpg"
+             alt="Community food distribution"
+             class="request-image">
+
+
+        <h2>
+            Request food for a person,
+            family or community group.
+        </h2>
+
+
+        <p>
+
+            Tell donors the required quantity,
+            pickup time and purpose.
+
+        </p>
+
+
+    </div>
+
+
+
+    <form class="form-box"
+          onsubmit="demoSubmit(event,'Food request submitted!')">
+
+
+        <h3>
+            Request Food
+        </h3>
+
+
+        <div class="grid">
+
+
+            <label>
+
+                Your Name
+
+                <input required
+                       placeholder="Name">
+
+            </label>
+
+
+            <label>
+
+                Organization
+
+                <input placeholder="NGO / Group">
+
+            </label>
+
+
+            <label>
+
+                Phone Number
+
+                <input required
+                       placeholder="Phone">
+
+            </label>
+
+
+            <label>
+
+                Required Quantity
+
+                <input required
+                       type="number"
+                       min="1"
+                       placeholder="Meals">
+
+            </label>
+
+
+        </div>
+
+
+        <label>
+
+            Food Needed
+
+            <input required
+                   placeholder="Example: Rice, fruits, meals">
+
+        </label>
+
+
+        <label>
+
+            Pickup Date & Time
+
+            <input type="datetime-local">
+
+        </label>
+
+
+        <label>
+
+            Purpose
+
+            <textarea rows="3"
+                      placeholder="Reason for requesting food"></textarea>
+
+        </label>
+
+
+        <button class="green-btn full">
+
+            Submit Request
+
+        </button>
+
+
+    </form>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 06 - DONATION TRACKING
+     ===================================================== -->
+
+<section id="tracking"
+         class="section">
+
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="label">
+                MODULE 06
+            </p>
+
+            <h2>
+                Donation Status Tracking
+            </h2>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="tracking">
+
+
+
+        <!-- TIMELINE -->
+
+        <div class="timeline">
+
+
+            <div class="step complete">
+
+                <b>✓</b>
+
+                <div>
+
+                    <strong>
+                        Donation Created
+                    </strong>
+
+                    <small>
+                        18 Sep 2026 · 11:30 AM
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="step complete">
+
+                <b>✓</b>
+
+                <div>
+
+                    <strong>
+                        Request Received
+                    </strong>
+
+                    <small>
+                        18 Sep 2026 · 12:15 PM
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="step current">
+
+                <b>●</b>
+
+                <div>
+
+                    <strong>
+                        Food Collected
+                    </strong>
+
+                    <small>
+                        Pickup completed
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <b>4</b>
+
+                <div>
+
+                    <strong>
+                        Food Distributed
+                    </strong>
+
+                    <small>
+                        Waiting for confirmation
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- STATUS -->
+
+        <div class="status-box">
+
+
+            <img src="images/4th.jpg"
+                 alt="Vegetable rice"
+                 class="tracking-image">
+
+
+            <span class="tag">
+                VEGETARIAN
+            </span>
+
+
+            <h3>
+                Vegetable Rice
+            </h3>
+
+
+            <p>
+                30 meals · Benz Circle, Vijayawada
+            </p>
+
+
+            <div class="status">
+
+                CURRENT STATUS
+
+                <strong id="statusText">
+                    Collected
+                </strong>
+
+            </div>
+
+
+            <button class="dark-btn"
+                    onclick="advanceStatus()">
+
+                Update Demo Status
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 07 - DASHBOARD
+     ===================================================== -->
+
+<section id="dashboard"
+         class="section">
+
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="label">
+                MODULE 07
+            </p>
+
+            <h2>
+                Dashboard
+            </h2>
+
+        </div>
+
+
+        <select onchange="changePeriod(this.value)">
+
+            <option>
+                This Month
+            </option>
+
+            <option>
+                This Week
+            </option>
+
+            <option>
+                This Year
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- DASHBOARD METRICS -->
+
+    <div class="metrics">
+
+
+        <div>
+
+            <span>
+                🍽️
+            </span>
+
+            <b>
+                25
+            </b>
+
+            <small>
+                Total Donations
+            </small>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                ◌
+            </span>
+
+            <b>
+                8
+            </b>
+
+            <small>
+                Available
+            </small>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                ✓
+            </span>
+
+            <b>
+                7
+            </b>
+
+            <small>
+                Collected
+            </small>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                ♥
+            </span>
+
+            <b>
+                10
+            </b>
+
+            <small>
+                Distributed
+            </small>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="dashboard-grid">
+
+
+        <!-- CHART -->
+
+        <div class="chart-box">
+
+            <h3>
+                Food Distribution Overview
+            </h3>
+
+
+            <div class="bars">
+
+
+                <div>
+
+                    <i style="height:55%"></i>
+
+                    <b>8</b>
+
+                    <small>
+                        Available
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <i style="height:38%"></i>
+
+                    <b>5</b>
+
+                    <small>
+                        Requested
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <i style="height:48%"></i>
+
+                    <b>7</b>
+
+                    <small>
+                        Collected
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <i style="height:72%"></i>
+
+                    <b>10</b>
+
+                    <small>
+                        Distributed
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- IMPACT -->
+
+        <div class="impact-box">
+
+            <span>
+                TOTAL MEALS SHARED
+            </span>
+
+            <strong>
+                620
+            </strong>
+
+            <small>
+                Meals this month
+            </small>
+
+
+            <hr>
+
+
+            <strong>
+                480
+            </strong>
+
+            <small>
+                Estimated beneficiaries
+            </small>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 08 - AWARENESS / ABOUT
+     ===================================================== -->
+
+<section id="about"
+         class="section about">
+
+
+    <div class="center-title">
+
+        <p class="label">
+            MODULE 08
+        </p>
+
+        <h2>
+            Awareness / About
+        </h2>
+
+        <p>
+            Why community food sharing matters.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         AWARENESS IMAGE
+
+         Download an image about food waste reduction,
+         food sharing or environmental awareness.
+
+         Rename:
+         awareness.jpg
+
+         Put inside:
+         images/awareness.jpg
+         ================================================= -->
+
+    <img src="images/9th.jpg"
+         alt="Food waste awareness"
+         class="awareness-image">
+
+
+
+    <div class="values">
+
+
+        <article>
+
+            <span>
+                ♻️
+            </span>
+
+            <h3>
+                Reduce Food Waste
+            </h3>
+
+            <p>
+                Share safe surplus food instead
+                of throwing it away.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                🤝
+            </span>
+
+            <h3>
+                Feed People
+            </h3>
+
+            <p>
+                Connect available meals with
+                people who need support.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                ❤️
+            </span>
+
+            <h3>
+                Support Communities
+            </h3>
+
+            <p>
+                Help volunteers and organizations
+                coordinate food distribution.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                🌍
+            </span>
+
+            <h3>
+                Protect Environment
+            </h3>
+
+            <p>
+                Reduce unnecessary waste of
+                food, water and energy.
+            </p>
+
+        </article>
+
+
+    </div>
+
+
+
+    <div class="tips">
+
+        <div>
+
+            <h3>
+                Tips to Reduce Food Waste
+            </h3>
+
+            <ul>
+
+                <li>
+                    Plan meals before shopping.
+                </li>
+
+                <li>
+                    Store food correctly.
+                </li>
+
+                <li>
+                    Share surplus food early.
+                </li>
+
+                <li>
+                    Donate safe food instead of
+                    throwing it away.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="quote">
+
+            "Small actions can make
+            a big difference."
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MODULE 09 - CONTACT / FEEDBACK
+     ===================================================== -->
+
+<section id="contact"
+         class="section two-column contact">
+
+
+    <div>
+
+
+        <p class="label">
+            MODULE 09
+        </p>
+
+
+        <h2>
+            Contact / Feedback
+        </h2>
+
+
+        <p>
+
+            We would love to hear suggestions,
+            partnership ideas or feedback.
+
+        </p>
+
+
+        <div class="contact-info">
+
+            <p>
+                ✉ hello@mealbridge.example
+            </p>
+
+            <p>
+                ☎ +91 90000 00000
+            </p>
+
+            <p>
+                📍 Andhra Pradesh, India
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <form class="form-box"
+          onsubmit="demoSubmit(event,'Thank you for your feedback!')">
+
+
+        <label>
+
+            Name
+
+            <input required
+                   placeholder="Your name">
+
+        </label>
+
+
+        <label>
+
+            Email
+
+            <input required
+                   type="email"
+                   placeholder="you@example.com">
+
+        </label>
+
+
+        <label>
+
+            Message
+
+            <textarea required
+                      rows="6"
+                      placeholder="Write your feedback..."></textarea>
+
+        </label>
+
+
+        <button class="dark-btn full">
+
+            Send Message
+
+        </button>
+
+
+    </form>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+
+    <div class="logo">
+        🍃 Meal<span>Bridge</span>
+    </div>
+
+
+    <p>
+        Share food. Connect people.
+        Build healthier communities.
+    </p>
+
+
+    <small>
+        © 2026 MealBridge - Frontend Demo
+    </small>
+
+
+</footer>
+
+
+
+<!-- Toast notification -->
+
+<div id="toast"></div>
+
+
+<!-- Connect JavaScript -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
