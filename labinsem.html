@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portal</title>
+</head>
+<body>
+
+<h2>Register</h2>
+<form id="reg">
+  Name: <input id="n"><br>
+  Email: <input id="e" type="email"><br>
+  Password: <input id="p" type="password"><br>
+  Confirm Password: <input id="c" type="password"><br>
+  <button>Sign Up</button>
+</form>
+
+<h2>Login</h2>
+<form id="log">
+  Email: <input id="le" type="email"><br>
+  Password: <input id="lp" type="password"><br>
+  <button>Login</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+var $ = function (id) { return document.getElementById(id); };
+var users = function () { return JSON.parse(localStorage.getItem("students") || "[]"); };
+
+$("reg").onsubmit = function (x) {
+  x.preventDefault();
+  var list = users();
+  if (!$("n").value || !$("e").value || !$("p").value) {
+    $("msg").textContent = "Error: Fill all fields.";
+  } else if ($("p").value !== $("c").value) {
+    $("msg").textContent = "Error: Passwords do not match.";
+  } else if (list.some(function (u) { return u.email === $("e").value; })) {
+    $("msg").textContent = "Error: Email already registered.";
+  } else {
+    list.push({ name: $("n").value, email: $("e").value, password: $("p").value });
+    localStorage.setItem("students", JSON.stringify(list));
+    $("msg").textContent = "Success: Registered. You can login now.";
+    this.reset();
+  }
+};
+
+$("log").onsubmit = function (x) {
+  x.preventDefault();
+  var u = users().find(function (s) {
+    return s.email === $("le").value && s.password === $("lp").value;
+  });
+  $("msg").textContent = u ? "Success: Welcome, " + u.name + "!" : "Error: Invalid email or password.";
+};
+</script>
+
+</body>
+</html>
